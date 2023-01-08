@@ -12,9 +12,9 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ['API_ID'])
-API_HASH = environ['API_HASH']
-BOT_TOKEN = environ['BOT_TOKEN']
+API_ID = int(environ('API_ID','9573300'))
+API_HASH = environ('API_HASH','eaa2cf1d5cbf6dc81da2d85a76a335a5')
+BOT_TOKEN = environ('BOT_TOKEN','5511128564:AAEMU24mwDunOSlDwxol3xa11KMoJ1vGsmw')
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -39,14 +39,14 @@ AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 FILDLT_CNL = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('FILDLT_CNL', '0').split()]
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://<Asmovies204>:<Anshuu12>@cluster0.izecre3.mongodb.net/?retryWrites=true&w=majority")
 DATABASE_NAME = environ.get('DATABASE_NAME', "EvaMaria")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Channel Button Links
-GRP_LNK = environ.get('GRP_LNK', 'https://t.me/CyniteSupport')
-CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/CyniteBackup')
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', CyniteSupport')
+GRP_LNK = environ.get('GRP_LNK', 'https://t.me/TG_Updates_204')
+CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/TG_Updates_204')
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', TG UPDATES')
 MSG_ALRT = environ.get('MSG_ALRT', 'Share and Support Us')
 
 # Custom Chats
@@ -55,8 +55,8 @@ FILE_CHANNEL = int(environ.get('FILE_CHANNEL', 0))
 FILE_CHANNEL_LINK = environ.get('FILE_CHANNEL_LINK', 't.me/Restricttest')
 
 # Log Channels
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', 0))
-RQST_LOG_CHANNEL = int(environ.get('RQST_LOG_CHANNEL', 0))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL','-1001851773945'))
+RQST_LOG_CHANNEL = int(environ.get('RQST_LOG_CHANNEL','-1001851773945'))
 
 # Bot Options
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
